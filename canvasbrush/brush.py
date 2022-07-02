@@ -35,7 +35,9 @@ class Brush(Canvas):
     def resolve_course_from_filename(self, filename: str):
         split = re.split(
             "-|_|\.",
-            lower_remove_prefixes(filename, self.student_name_variations + ["-", "_"]),
+            lower_remove_prefixes(
+                filename, self.student_name_variations() + ["-", "_"]
+            ),
         )
 
         course = self.resolve_course(split[0])
@@ -138,7 +140,9 @@ class Brush(Canvas):
     def resolve_assignment_from_filename(self, filename: str, course: Course = None):
         split = re.split(
             "-|_|\.",
-            lower_remove_prefixes(filename, self.student_name_variations + ["-", "_"]),
+            lower_remove_prefixes(
+                filename, self.student_name_variations() + ["-", "_"]
+            ),
         )[1:][:-1]
 
         if not course:
