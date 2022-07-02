@@ -1,0 +1,13 @@
+{
+    "student_name": "John Doe",
+    "course_map": [
+        {
+            "id": "00001",
+            "aliases": ["calculus i", "calculus", "calc"]
+        },
+        {
+            "id": "00002",
+            "aliases": ["principles of macroeconomics", "macroecon"]
+        }
+    ]
+}
