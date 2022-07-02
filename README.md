@@ -32,7 +32,14 @@ name `brush.config.json`.
 cp brush.example.config.json brush.config.json
 ```
 
-Edit the `brush.config.json` file to your liking.
+Edit the `brush.config.json` file to your liking. You should also create a
+`.env` file with the following fields, or manually set them as environment
+variables in your shell:
+
+```
+CANVAS_API_URL=YOUR_CANVAS_URL
+CANVAS_API_KEY=YOUR_API_KEY
+```
 
 ## Running the CLI
 
@@ -44,6 +51,8 @@ cd brush
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+echo "CANVAS_API_URL=YOUR_CANVAS_URL" >> .env
+echo "CANVAS_API_KEY=YOUR_API_KEY" >> .env
 ```
 
 Then, I have this alias set up in my `.bashrc`:
