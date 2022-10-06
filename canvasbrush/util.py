@@ -62,11 +62,7 @@ def lower_remove_prefixes(filename: str, variations: list[str]):
 
 
 def is_integer(n: int | float):
-    if isinstance(n, int):
-        return True
-    if isinstance(n, float):
-        return n.is_integer()
-    return False
+    return type(n) == int
 
 
 def to_num(s: str):
