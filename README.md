@@ -25,14 +25,15 @@ configuration file:
 }
 ```
 
-To create your own configuration, copy the example configuration to have the
-name `brush.config.json`.
+To create your own configuration, copy the example configuration to your home
+directory, under the name `.brushrc`. Alternatively, set the `BRUSH_CONFIG_PATH`
+environment variable to whatever path you want.
 
 ```
-cp brush.example.config.json brush.config.json
+cp brush.example.config.json ~/.brushrc
 ```
 
-Edit the `brush.config.json` file to your liking. You should also create a
+Edit the configuration file to your liking. You should also create a
 `.env` file with the following fields, or manually set them as environment
 variables in your shell:
 
